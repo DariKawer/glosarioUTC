@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Source Serif Pro', serif;
+    margin: 0;
+}
+
+.contenido{
+    margin: auto;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    background: #334b4efd;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border-right: 2px solid #2f4b50fd;
+
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: linear-gradient(120deg, 
+    rgb(100, 100, 216), 
+    rgb(90, 90, 216), 
+    rgb(80, 80, 216), 
+    rgb(60, 60, 202), 
+    rgb(80, 80, 216), 
+    rgb(90, 90, 216), 
+    rgb(100, 100, 216));
+    animation: animate 6s linear infinite;
+    background-size: 200%;
+}
+
+header .enlace{
+    position: absolute;
+    padding: 12px 30px;
+}
+
+header .logo{
+    height: 70px;
+    width: auto;
+    transition: all 0.5s;
+    cursor:context-menu;
+}
+
+header .logo:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(2px 2px 10px rgb(51, 51, 119));
+}
+
+header nav ul{
+    float: right;
+    margin-right: 40px;
+}
+header nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 5px;
+}
+header nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 13px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgb(38, 4, 255);
+}
+header li a.active{
+    background: rgb(66, 63, 146);
+    border-style: solid;
+    border-color: rgb(51, 65, 89);
+    transition: .5s;
+    color: #fff;
+}
+
+header li a:hover{
+    background: rgb(33, 33, 95);
+    color:  rgb(129, 129, 228);
+}
+
+header .checkbtn{
+    font-size: 60px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+header .checkbtn:hover{
+    filter: drop-shadow(2px 2px 10px rgb(51, 51, 119));
+}
+header #check{
+    display: none;
+}
+
+#inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("imgs/fondo1.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}   
+
+#inicio span {
+    color: rgb(57, 94, 215);
+    object-fit: cover;
+    text-shadow: 2px 2px 5px rgb(42, 48, 61);
+    font-size: 2.5em;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 37ch;
+    text-shadow: 2px 2px 5px rgba(38, 172, 255, 0.804);
+    animation: typing 4s steps(50), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+#inicio hr.hr1{
+    width: 80%;
+    border: 1px solid #46828dda;
+}
+
+#inicio button{
+    font-size: 1.25em;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 3px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color:rgb(44, 83, 212);
+}
+
+#inicio button:hover{
+    background-color: rgb(28, 54, 168);
+}
+
+#textos .contenido{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0.2),
+    rgba(0,0,0,0.2)
+    )
+    ,url("imgs/fondo2.gif");
+    padding: 100px 0px;
+    height: 260vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#textos .color-acento{
+    text-shadow:  5px 5px 10px rgb(13, 31, 48);
+    color: rgb(98, 172, 201);
+    font-size: 3em;
+}
+
+#textos .texto h3{
+    color: rgb(69, 150, 182);
+    text-shadow: 2px 2px 5px rgb(34, 5, 5);
+    font-size: 2em;
+    padding: 0px 50px;
+}
+
+#textos .texto h2{
+    text-align: center;
+}
+
+#textos .texto{
+    color: white;
+}
+
+#textos .card{
+    background: #3a5257c9;
+    width: 1100px;
+    height: 380px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 40px;
+    border: 5px solid black;
+}
+
+#textos .card p{
+    text-align: justify;
+}
+
+#textos .card .img1{
+    float: left;
+    shape-outside: circle(50%);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    margin: 1%;
+}
+
+#textos .card2{
+    background: #3a5257c9;
+    width: 1100px;
+    height: 340px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 40px;
+    border: 5px solid black;
+    animation: fade 1.2s both;
+}
+
+#textos .card2 p{
+    text-align: justify;
+}
+
+#textos .card2 .img2{
+    float: right;
+    shape-outside: circle(50%);
+    border-radius: 50%;
+    height: 210px;
+    width: 210px;
+    border: 5px solid black;
+    margin: 1%;
+}
+
+#textos .card3{
+    background: #3a5257c9;
+    width: 1100px;
+    height: 380px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 40px;
+    border: 5px solid black;
+    animation: fade 1.2s both;
+}
+
+#textos .card3 p{
+    text-align: justify;
+}
+
+#textos .card3 .img3{
+    float: left;
+    shape-outside: circle(50%);
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    border: 5px solid black;
+    margin: 1%;
+}
+
+#textos .fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  
+ #textos .fade-in.apar {
+    opacity: 1;
+  }
+
+#glosario .contenido{
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ), url("imgs/fondo3.gif");
+    padding: 100px 0px;
+    height: 300vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#glosario .color-acento{
+    text-shadow:  4px 4px 10px rgb(34, 5, 5);
+    color: rgb(98, 172, 201);
+    font-size: 3em;
+}
+
+#glosario .contenido h3{
+    color: #1ba6beda;
+    text-shadow: 2px 2px 5px rgb(34, 5, 5);
+    font-size: 2em;
+    padding: 0px 50px;
+}
+
+#glosario .contenido h2{
+    text-align: center;
+}
+
+#glosario .contenido{
+    color: white;
+}
+
+#glosario .card4{
+    background: #3a5257e0;
+    width: 1100px;
+    height: 850px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 40px;
+    border: 5px solid black;
+    animation: fade 1.2s both;
+}
+
+#glosario .card4 p{
+    text-align: justify;
+}
+
+#glosario .card4 .img4{
+    float: left;
+    shape-outside: circle(50%);
+    border-radius: 50%;
+    height: 240px;
+    width: 250px;
+    border: 5px solid black;
+    margin: 1%;
+}
+
+#glosario .card4 .img5{
+    float: right;
+    shape-outside: circle(50%);
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    border: 5px solid black;
+    margin: 1%;
+}
+
+.scroll-bg{
+    background: #3a3d57;
+    width: 1100px;
+    margin: 10% auto;
+    padding: 45px;
+    border-radius: 40px;
+    border: 5px solid black;
+}
+
+.scroll-div{
+    width: 1000px;
+    background: #5b6e88d8;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 5px solid black;
+}
+
+.scroll-object{
+    color:#fff;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.scroll-object h2, p {
+    padding: 2px 20px;
+}
+
+.scroll-div::-webkit-scrollbar{
+    width: 0px;
+}
+
+.scroll-object {
+    position: relative;
+}
+
+.scroll-object dt {
+    background: rgb(60, 60, 202);
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.scroll-object h2{
+    letter-spacing: .1rem;
+    margin: 1rem 0;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+#glosario .fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  
+ #glosario .fade-in.apar {
+    opacity: 1;
+  }
+
+#glosario .slider-in {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#glosario .slider-in {
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
+    opacity: 0;
+  }
+  
+ #glosario .slider-in.apar {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+#cuestionario .container{
+    display: flex;
+    justify-content: center;
+    height:110vh;
+    align-items: center;
+    background: linear-gradient(
+        120deg,
+        rgba(73, 85, 255, 0.8),
+        rgba(60, 78, 255, 0.8), 
+        rgba(58, 78, 255, 0.8),
+        rgba(60, 78, 255, 0.8), 
+        rgba(73, 85, 255, 0.8),
+        rgba(60, 78, 255, 0.8)
+        );
+}
+
+#cuestionario .container iframe{
+    background-color: rgba(158, 255, 223, 0.24);
+    border: .1rem solid rgba(0, 0, 0, 0.971);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
+    width: 900px;
+    height: 600px;
+}
+
+footer{
+    background-color: rgb(30, 30, 30);
+}
+
+footer .contenido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box1 h2{
+    margin-bottom: 10px;
+    color: #7a7a7a;
+    font-weight: 700;
+}
+
+.box1 p{
+    margin-top: 5px;
+    color: #7a7a7a;
+    font-weight: 200;
+}
+
+.box1 p:hover{
+    opacity: 0.8;
+}
+
+.boxcopy{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.boxcopy p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.boxcopy hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+.boxcopy a{
+    color: #206fc9;
+}
+
+.boxcopy a:hover{
+    color: #258bff;
+}
+
+@media (max-width: 952px){
+    header .enlace{
+        padding-left: 20px;
+    }
+    header nav ul li a{
+        font-size: 16px;
+    }
+
+    .scroll-bg{
+        width: 550px;
+        margin: 10% auto;
+        padding: 20px;
+    }
+    
+    .scroll-div{
+        width: 500px;
+        height: 550px;
+    }
+
+}
+
+@media (max-width: 858px){
+    header{
+        position: fixed;
+        
+    }
+    header .checkbtn{
+        display: block;
+    }
+
+    header ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(33, 33, 95);
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+
+    header nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    header nav ul li a{
+        font-size: 22px;
+        text-shadow: 2px 2px 5px rgb(38, 4, 255);
+    }
+    header li a:hover{
+        background: none;
+        color: rgb(129, 129, 228);
+        border-right: 4px solid black;
+        border-bottom: 3px solid black;
+        border-top: 1px solid black;
+    }
+    header li a.active{
+        background: none;
+        border-style: none;
+        color: rgb(120, 120, 214);
+        border-right: 4px solid black;
+        border-bottom: 3px solid black;
+        border-top: 1px solid black;
+    }
+    header #check:checked ~ ul{
+        left: 0;
+    }
+
+    #inicio span {
+        color: rgb(57, 94, 215);
+        object-fit: cover;
+        text-shadow: 2px 2px 5px rgb(42, 48, 61);
+        display: block;
+        font-family: monospace;
+        white-space: nowrap;
+        border-right: 4px solid;
+        font-size: .8em;
+        width: 37ch;
+        text-shadow: 2px 2px 5px rgb(42, 48, 61);
+        animation: typing 4s steps(50), blink .5s infinite step-end alternate;
+        overflow: hidden;
+    }
+
+    #inicio button{
+        font-size: 0.5em;
+        padding: 10px 10px;
+        border-radius: 50px;
+    }
+
+    #textos .contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 400vh;
+    }
+
+    #textos .color-acento{
+        font-size: 2em;
+    }
+
+    #textos .texto h3{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #textos .card{
+        width: 350px;
+        height: 810px;
+    }
+
+    #textos .card p{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+
+    #textos .card .img1{
+        height: 250px;
+        width: 250px;
+        shape-outside: none;
+        margin: 5%;
+    }
+
+    #textos .card2{
+        width: 350px;
+        height: 710px;
+    }
+
+    #textos .card2 p{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+
+    #textos .card2 .img2{
+        height: 250px;
+        width: 250px;
+        shape-outside: none;
+        margin: 5%;
+    }
+
+    #textos .card3{
+        width: 350px;
+        height: 890px;
+    }
+
+    #textos .card3 p{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+
+    #textos .card3 .img3{
+        height: 250px;
+        width: 250px;
+        shape-outside: none;
+        margin: 5%;
+    }
+
+    #glosario .contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 390vh;
+    }
+
+    #glosario .color-acento{
+        font-size: 2em;
+    }
+
+    #glosario .contenido h3{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #glosario .card4{
+        width: 350px;
+        height: 1750px;
+    }
+
+    #glosario .card4 p{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+
+    #glosario .card4 .img4{
+        height: 260px;
+        width: 260px;
+        shape-outside: none;
+        margin: 5%;
+    }
+
+    #glosario .card4 .img5{
+        height: 260px;
+        width: 260px;
+        shape-outside: none;
+        margin: 5%;
+    }
+
+    .scroll-bg{
+        width: 350px;
+        margin: 10% auto;
+        padding: 20px;
+        align-items: center center;
+    }
+    
+    .scroll-div{
+        width: 300px;
+        height: 550px;
+    }
+
+    .scroll-object h2{
+        text-align: justify;
+        font-size: 0.9em;
+    }
+
+    .scroll-object p{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+
+    .cubo{
+        height: 40px;
+        width: 90px;
+        background-color:#4a6d95;
+        border-radius: 50px;
+        border: 5px solid black;
+        margin-left: 5.1em;
+        margin-top: 0.5em;
+    }
+
+    #cuestionario .container{
+        height: 120vh;
+    }
+
+    #cuestionario .container iframe{
+        background-color: rgba(158, 255, 223, 0.24);
+        border: .1rem solid rgb(0, 0, 0);
+        border-radius: 0.5rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
+        width: 355px;
+        height: 700px;
+    }
+
+    footer .contenido{
+        justify-content: flex-start;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    0% {
+        background-position: 200% 0;
+    }
+
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
